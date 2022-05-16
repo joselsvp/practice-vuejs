@@ -26,6 +26,7 @@ export default {
         AccionSaldo
     },
     methods: {
+        //estas opciones se deberán de activar a través del componente hijo
         aumentar() {
             this.saldo = this.saldo + 100;
         },
