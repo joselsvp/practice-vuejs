@@ -5,8 +5,23 @@
     <div v-for="(servicio, index) in servicios" :key="index">
         {{index + 1}} .- {{servicio}}
     </div> 
-    <AccionSaldo texto = 'Aumentar saldo'/>
-    <AccionSaldo texto = 'Disminuir saldo'/>
+    <AccionSaldo 
+        texto = 'Aumentar saldo'
+        @accion = 'aumentar'
+    />
+    <AccionSaldo 
+        texto = 'Disminuir saldo'
+    />
+
+    <!--
+@accion = 'aumentar'
+El componente hijo
+ aumentar() {
+            this.saldo = this.saldo + 100;
+        },
+        va a poder acceder al este método
+
+    -->
 </template>
 
 <script>
